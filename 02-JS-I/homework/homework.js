@@ -188,7 +188,7 @@ function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
   
-  var cubo= Math.squar(num);
+  var cubo= Math.pow(num,3);
 
   return cubo;
   
