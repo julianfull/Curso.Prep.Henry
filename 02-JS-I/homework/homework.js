@@ -263,12 +263,15 @@ function esPositivo(numero) {
 if(numero > 1) {
   return 'Es positivo';
 }
-else {
+else if (numero < 0) {  
   return 'Es negativo';
-
-}
 }
 
+else if (numero==0) {
+
+  return false;
+}
+}
 esPositivo(23);
 
 
@@ -329,21 +332,39 @@ function obtenerAreaRectangulo(alto, ancho) {
   // Retornar el area de un rectángulo teniendo su altura y ancho
   // Tu código:
   
-}
 
+  var base = alto * ancho;
+
+  return base;
+
+
+
+}
+obtenerAreaRectangulo (20, 30);
 
 function retornarPerimetro(lado){
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   //Escribe tu código aquí
   
+var cuadrado = lado * 4;
+return cuadrado
+
 }
+
+retornarPerimetro (30);
 
 
 function areaDelTriangulo(base, altura){
   //Desarrolle una función que calcule el área de un triángulo.
   //Escribe tu código aquí
 
+
+  var area = (base*altura)/2;
+
+  return area;
 }
+
+areaDelTriangulo (10,5);
 
 
 function deEuroAdolar(euro){
@@ -351,7 +372,14 @@ function deEuroAdolar(euro){
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
   
+var dolar = 1.20;
+var cambio = dolar*euro;
+
+return cambio;
+
 }
+
+deEuroAdolar (200);
 
 
 function esVocal(letra){
@@ -360,9 +388,20 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
-  
-}
 
+  if (letra == "a" || letra == "e" || letra == "i" || letra == "o" || letra == "u") {
+
+    return 'Es vocal';
+    }
+
+  else if (letra != "a" || letra != "e" || letra != "i" || letra != "o" || letra != "u") {
+
+      return 'Dato incorrecto';
+  
+      }
+ 
+  }
+esVocal ('y');
 
 
 // No modificar nada debajo de esta línea
