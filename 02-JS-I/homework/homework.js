@@ -199,54 +199,131 @@ elevarAlCubo (6);
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
-  
+
+  resultado=Math.pow(num,exponent); 
+return resultado;
 }
+
+elevar (2,2);
 
 function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
+
+  resultado=Math.round(num);
+
+  return resultado;
   
 }
+
+redondearNumero (12,3);
 
 function redondearHaciaArriba(num) {
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
   
+  resultado=Math.ceil(num);
+
+  return resultado;
+  
 }
+
+redondearHaciaArriba (12,3);
 
 function numeroRandom() {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
   
+  resultado=Math.random(0,1);
+
+  return resultado;
+  
 }
+
+numeroRandom ();
 
 function esPositivo(numero) {
   //La función va a recibir un entero. Devuelve como resultado una cadena de texto que indica si el número es positivo o negativo. 
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
+
+  //if (numero>0) {
+
+    //var hola = "Es positivo";
+    //return hola;
+  //}
+  //else {
+    //var hola2 = "Es Negativo";
+    //return hola2;
+//}
   
+//}
+
+if(numero > 1) {
+  return 'Es positivo';
 }
+else {
+  return 'Es negativo';
+
+}
+}
+
+esPositivo(23);
+
+
+
 
 function agregarSimboloExclamacion(str) {
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
   // Ejemplo: "hello world" pasaría a ser "hello world!"
   // Tu código:
+
+
+ // console.log( `hello word ${str}`);
+
+
+ const str1 = '!';
+ 
+ 
+ return (str.concat(str1));
+ // expected output: "Hello World"
+
+ 
 }
+agregarSimboloExclamacion ('hello word');
+
+
 
 function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
+   
+ 
+  return (nombre.concat(' ', apellido));
+  // expected output: "Hello World"
+ 
   
-}
+ }
+ combinarNombres ('soy', 'henry');
+
+
 
 function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
+
+  const str1 = 'Hola';
+  const str2 = '!';
+ 
+ 
+ return (str1.concat(' ',nombre + str2));
   
 }
+
+obtenerSaludo ('Martin');
 
 function obtenerAreaRectangulo(alto, ancho) {
   // Retornar el area de un rectángulo teniendo su altura y ancho
