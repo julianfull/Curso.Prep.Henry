@@ -190,18 +190,28 @@ function operadoresLogicos(num1, num2, num3) {
     return 'Hay negativos';
   }
 
+  else if (num3===0 || num2===0 || num1===0) {
+    return 'Error';
+}
+
 
   else if (num1 > num2 && num1 > num3 && num1 > 0){
       return 'Número 1 es mayor y positivo';
     }
       
+else if (num3 > num1 && num3 > num2) {
+        return num3+1;
+}
+
+else { return false
+}
 
 }
 
 
 
 
-operadoresLogicos(80,-1,2);
+operadoresLogicos(80,0,2);
 
 function esPrimo(numero) {
   // Devuelve "true" si "numero" es primo
@@ -209,7 +219,22 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
+
+for ( i = 0 ; i = numero ; i++) {
+
+  if (numero % i === 0) {
+
+    return true;
+  }
+else {return false;
+          }
+
 }
+    
+}
+
+esPrimo(10);
+
 
 function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
